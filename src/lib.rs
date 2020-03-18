@@ -1,3 +1,8 @@
+/*
+ *   Copyright (c) 2020 
+ *   All rights reserved.
+ */
+
 
 pub mod filerw {
     use std::fs::File;
