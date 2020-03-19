@@ -1,4 +1,4 @@
-# excercise1
+# excercise1 got horrible
 
 
 This project involves creating an input text file named `input.txt` which contains people's first name, second name and date of birth as shown:
