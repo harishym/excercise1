@@ -1,15 +1,10 @@
-/*
- *   Copyright (c) 2020 
- *   All rights reserved.
- */
-
 
 pub mod filerw {
     use std::fs::File;
     use std::io::BufReader;
 
  pub fn rf (f:&str) ->  BufReader<File> {
-                         let f1= File::open(f).expect("could not");
+                         let f1= File::open(f).expect("could not open the file");
                          let _f3 = BufReader::new(f1);
                          return _f3;
                        }
@@ -74,18 +69,18 @@ for line in f3.lines() {
   let dat: i32 = tokens2[2].parse().unwrap();
 
 
-  let mut myear = y - year;
-  myear = myear - 1;
+  let mut age = y - year;
+  age = age - 1;
   if mon < m {
-      myear = myear + 1;
+      age = age + 1;
   }
 
   if mon == m {
       if dat < d {
-          myear = myear + 1;
+          age = age + 1;
       }
   }
-  writeln!(f1, "{}, {}, {}", person.Fin, person.Lan, myear);
+  writeln!(f1, "{}, {}, {}", person.Fin, person.Lan, age).expect("could not write into the file");
 }
 }
 }
