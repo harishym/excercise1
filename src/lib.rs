@@ -9,7 +9,7 @@ pub mod filerw {
     use std::io::BufReader;
 
  pub fn rf (f:&str) ->  BufReader<File> {
-                         let f1= File::open(f).expect("could not open the file");
+                         let f1= File::open(f).expect("could not");
                          let _f3 = BufReader::new(f1);
                          return _f3;
                        }
@@ -85,7 +85,7 @@ for line in f3.lines() {
           myear = myear + 1;
       }
   }
-  writeln!(f1, "{}, {}, {}", person.Fin, person.Lan, myear).expect("could not write into the file");
+  writeln!(f1, "{}, {}, {}", person.Fin, person.Lan, myear);
 }
 }
 }
