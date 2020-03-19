@@ -17,8 +17,8 @@ fn main () {
                      .takes_value(true))
        .get_matches();
 
-    let myfile = matches.value_of("file").expect("argument missing");
-    let ofile = matches.value_of("out").expect("argument missing");
+    let myfile = matches.value_of("file").unwrap();
+    let ofile = matches.value_of("out").unwrap();
     let f3 = lib::filerw::rf(myfile);
     let mut f1 = lib::filerw::wf(ofile);
     let (y, m, d) = lib::system_date::get_date();
